@@ -36,12 +36,14 @@
             this.Testing = new System.Windows.Forms.LinkLabel();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabProgram = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.spustit = new System.Windows.Forms.Button();
             this.tabSetting = new System.Windows.Forms.TabPage();
+            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
             this.tabLicence = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.licenceKey = new System.Windows.Forms.MaskedTextBox();
@@ -49,9 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabAbout = new System.Windows.Forms.TabPage();
-            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
             this.autor = new Slovní_fotbal.Core.UI.Autor();
-            this.label1 = new System.Windows.Forms.Label();
             this.tab.SuspendLayout();
             this.tabProgram.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -134,6 +134,16 @@
             this.tabProgram.Text = "Program";
             this.tabProgram.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(19, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(284, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Používat horní prostředí!!!";
+            // 
             // listBox2
             // 
             this.listBox2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -198,6 +208,14 @@
             this.tabSetting.TabIndex = 1;
             this.tabSetting.Text = "Nastavení";
             this.tabSetting.UseVisualStyleBackColor = true;
+            // 
+            // uiNastaveni
+            // 
+            this.uiNastaveni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiNastaveni.Location = new System.Drawing.Point(3, 3);
+            this.uiNastaveni.Name = "uiNastaveni";
+            this.uiNastaveni.Size = new System.Drawing.Size(473, 194);
+            this.uiNastaveni.TabIndex = 0;
             // 
             // tabLicence
             // 
@@ -273,14 +291,6 @@
             this.tabAbout.Text = "Informace";
             this.tabAbout.UseVisualStyleBackColor = true;
             // 
-            // uiNastaveni
-            // 
-            this.uiNastaveni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiNastaveni.Location = new System.Drawing.Point(3, 3);
-            this.uiNastaveni.Name = "uiNastaveni";
-            this.uiNastaveni.Size = new System.Drawing.Size(473, 194);
-            this.uiNastaveni.TabIndex = 0;
-            // 
             // autor
             // 
             this.autor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -288,16 +298,6 @@
             this.autor.Name = "autor";
             this.autor.Size = new System.Drawing.Size(473, 194);
             this.autor.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(19, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Používat horní prostředí!!!";
             // 
             // Form1
             // 

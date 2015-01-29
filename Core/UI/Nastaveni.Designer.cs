@@ -48,7 +48,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.91525F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.08475F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.saveSetting, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.message, 1, 4);
@@ -99,7 +99,7 @@
             this.message.Dock = System.Windows.Forms.DockStyle.Fill;
             this.message.Location = new System.Drawing.Point(171, 106);
             this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(132, 44);
+            this.message.Size = new System.Drawing.Size(131, 44);
             this.message.TabIndex = 2;
             this.message.Text = "Zpráva";
             this.message.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -121,7 +121,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(132, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(131, 20);
             this.numericUpDown1.TabIndex = 3;
             this.numericUpDown1.Value = new decimal(new int[] {
             200,
@@ -133,9 +133,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(309, 0);
+            this.label3.Location = new System.Drawing.Point(308, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 25);
+            this.label3.Size = new System.Drawing.Size(55, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "ms";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,7 +156,7 @@
             this.slovnik.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slovnik.Location = new System.Drawing.Point(171, 28);
             this.slovnik.Name = "slovnik";
-            this.slovnik.Size = new System.Drawing.Size(132, 21);
+            this.slovnik.Size = new System.Drawing.Size(131, 21);
             this.slovnik.TabIndex = 7;
             // 
             // label4
@@ -176,7 +176,7 @@
             this.poziceMysi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.poziceMysi.Location = new System.Drawing.Point(171, 55);
             this.poziceMysi.Name = "poziceMysi";
-            this.poziceMysi.Size = new System.Drawing.Size(132, 21);
+            this.poziceMysi.Size = new System.Drawing.Size(131, 21);
             this.poziceMysi.TabIndex = 9;
             // 
             // button1
@@ -184,7 +184,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(171, 82);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 21);
+            this.button1.Size = new System.Drawing.Size(131, 21);
             this.button1.TabIndex = 10;
             this.button1.Text = "Naučit pozice myši";
             this.button1.UseVisualStyleBackColor = true;
