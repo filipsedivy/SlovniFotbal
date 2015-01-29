@@ -36,11 +36,6 @@ namespace Slovní_fotbal
             }
         }
 
-        private void run_Click(object sender, EventArgs e)
-        {
-            vyhledavac.VyhledatSlova(licence.getKey("dictonary"), letters.Text, listBox1);
-        }
-
         private void learnMode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Learn learn = new Learn();
@@ -87,7 +82,18 @@ namespace Slovní_fotbal
                 actionProgress.Style = ProgressBarStyle.Blocks;
                 actionProgress.Value = 100;
             }
-            finally {
+
+            actionHelper.Text = "Probíhá zadávání slov";
+            try
+            {
+                automaticky.klikat(textBox1.Text, listBox2);
+            }
+            catch (SlovniFotbalException sE)
+            {
+
+            }
+            finally
+            {
                 spustit.Enabled = true;
             }
         }
