@@ -95,6 +95,7 @@
       <DependentUpon>VyberSoubor.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\Vyhledavac.cs" />
+    <Compile Include="Core\Vyjimky.cs" />
     <Compile Include="Core\Vyuka.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
