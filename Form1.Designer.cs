@@ -36,14 +36,12 @@
             this.Testing = new System.Windows.Forms.LinkLabel();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabProgram = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.spustit = new System.Windows.Forms.Button();
             this.tabSetting = new System.Windows.Forms.TabPage();
-            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
             this.tabLicence = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.licenceKey = new System.Windows.Forms.MaskedTextBox();
@@ -51,6 +49,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabAbout = new System.Windows.Forms.TabPage();
+            this.actionProgress = new System.Windows.Forms.ProgressBar();
+            this.actionHelper = new System.Windows.Forms.Label();
+            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
             this.autor = new Slovní_fotbal.Core.UI.Autor();
             this.tab.SuspendLayout();
             this.tabProgram.SuspendLayout();
@@ -122,7 +123,8 @@
             // 
             // tabProgram
             // 
-            this.tabProgram.Controls.Add(this.label1);
+            this.tabProgram.Controls.Add(this.actionHelper);
+            this.tabProgram.Controls.Add(this.actionProgress);
             this.tabProgram.Controls.Add(this.listBox2);
             this.tabProgram.Controls.Add(this.tableLayoutPanel1);
             this.tabProgram.Controls.Add(this.spustit);
@@ -133,16 +135,6 @@
             this.tabProgram.TabIndex = 2;
             this.tabProgram.Text = "Program";
             this.tabProgram.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(19, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Používat horní prostředí!!!";
             // 
             // listBox2
             // 
@@ -208,14 +200,6 @@
             this.tabSetting.TabIndex = 1;
             this.tabSetting.Text = "Nastavení";
             this.tabSetting.UseVisualStyleBackColor = true;
-            // 
-            // uiNastaveni
-            // 
-            this.uiNastaveni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiNastaveni.Location = new System.Drawing.Point(3, 3);
-            this.uiNastaveni.Name = "uiNastaveni";
-            this.uiNastaveni.Size = new System.Drawing.Size(473, 194);
-            this.uiNastaveni.TabIndex = 0;
             // 
             // tabLicence
             // 
@@ -291,6 +275,36 @@
             this.tabAbout.Text = "Informace";
             this.tabAbout.UseVisualStyleBackColor = true;
             // 
+            // actionProgress
+            // 
+            this.actionProgress.Location = new System.Drawing.Point(162, 169);
+            this.actionProgress.Name = "actionProgress";
+            this.actionProgress.Size = new System.Drawing.Size(161, 23);
+            this.actionProgress.Step = 5;
+            this.actionProgress.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.actionProgress.TabIndex = 4;
+            this.actionProgress.Visible = false;
+            // 
+            // actionHelper
+            // 
+            this.actionHelper.BackColor = System.Drawing.SystemColors.Info;
+            this.actionHelper.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.actionHelper.Location = new System.Drawing.Point(6, 143);
+            this.actionHelper.Name = "actionHelper";
+            this.actionHelper.Size = new System.Drawing.Size(317, 23);
+            this.actionHelper.TabIndex = 5;
+            this.actionHelper.Text = "Popis akce";
+            this.actionHelper.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.actionHelper.Visible = false;
+            // 
+            // uiNastaveni
+            // 
+            this.uiNastaveni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiNastaveni.Location = new System.Drawing.Point(3, 3);
+            this.uiNastaveni.Name = "uiNastaveni";
+            this.uiNastaveni.Size = new System.Drawing.Size(473, 194);
+            this.uiNastaveni.TabIndex = 0;
+            // 
             // autor
             // 
             this.autor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -317,7 +331,6 @@
             this.Text = "Slovní fotbal";
             this.tab.ResumeLayout(false);
             this.tabProgram.ResumeLayout(false);
-            this.tabProgram.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabSetting.ResumeLayout(false);
@@ -354,7 +367,8 @@
         private System.Windows.Forms.Button validateLicence;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ProgressBar actionProgress;
+        private System.Windows.Forms.Label actionHelper;
     }
 }
 
