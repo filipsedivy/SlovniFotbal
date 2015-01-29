@@ -19,14 +19,12 @@ namespace Slovní_fotbal.Core
 
             if (!File.Exists(Soubor))
             {
-                MessageBox.Show("Slovník nebyl nalezen", "Chyba souboru");
-                return;
+                throw new SlovniFotbalException("Slovník nebyl nalezen");
             }
 
             if (Pismena.Length <= 3)
             {
-                MessageBox.Show("Délka písmen musí být větší než 3", "Chyba aplikace");
-                return;
+                throw new SlovniFotbalException("Počet písmen musí být více než 3");
             }
 
             Vypis.Items.Clear();
