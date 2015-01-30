@@ -59,6 +59,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Core\Automaticky.cs" />
     <Compile Include="Core\Boot.cs" />
+    <Compile Include="Core\Communicator.cs" />
     <Compile Include="Core\Licence.cs" />
     <Compile Include="Core\Mys.cs" />
     <Compile Include="Core\Pamet.cs" />
