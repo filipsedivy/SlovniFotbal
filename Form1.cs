@@ -50,7 +50,7 @@ namespace Slovní_fotbal
                 Environment.Exit(0);
             }
 
-            automaticky.klikat(textBox1.Text, listBox2);
+            automaticky.klikat(labels.Text, listBox2);
         }
 
         private void tab_Selected(object sender, TabControlEventArgs e)
@@ -73,7 +73,7 @@ namespace Slovní_fotbal
             actionHelper.Text = "Probíhá vyhledávání slov";
             try
             {
-                vyhledavac.VyhledatSlova(licence.getKey("dictonary"), textBox1.Text, listBox2);
+                vyhledavac.VyhledatSlova(licence.getKey("dictonary"), labels.Text, listBox2);
             }
             catch (SlovniFotbalException sE)
             {
@@ -86,7 +86,7 @@ namespace Slovní_fotbal
             actionHelper.Text = "Probíhá zadávání slov";
             try
             {
-                automaticky.klikat(textBox1.Text, listBox2);
+                automaticky.klikat(labels.Text, listBox2);
             }
             catch (SlovniFotbalException sE)
             {
