@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tab = new System.Windows.Forms.TabControl();
             this.tabProgram = new System.Windows.Forms.TabPage();
+            this.countWords = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labels = new System.Windows.Forms.MaskedTextBox();
             this.spustit = new System.Windows.Forms.Button();
             this.tabSetting = new System.Windows.Forms.TabPage();
+            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
             this.tabLicence = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.licenceKey = new System.Windows.Forms.MaskedTextBox();
@@ -44,12 +46,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabAbout = new System.Windows.Forms.TabPage();
+            this.autor = new Slovní_fotbal.Core.UI.Autor();
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.actionHelper = new System.Windows.Forms.ToolStripStatusLabel();
             this.actionProgress = new System.Windows.Forms.ToolStripProgressBar();
-            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
-            this.autor = new Slovní_fotbal.Core.UI.Autor();
-            this.countWords = new System.Windows.Forms.Label();
             this.tab.SuspendLayout();
             this.tabProgram.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -88,6 +88,15 @@
             this.tabProgram.Text = "Program";
             this.tabProgram.UseVisualStyleBackColor = true;
             // 
+            // countWords
+            // 
+            this.countWords.Location = new System.Drawing.Point(326, 140);
+            this.countWords.Name = "countWords";
+            this.countWords.Size = new System.Drawing.Size(147, 20);
+            this.countWords.TabIndex = 3;
+            this.countWords.Text = "Nalezených slov: 0";
+            this.countWords.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
@@ -102,7 +111,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.13043F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.86957F));
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labels, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -122,13 +131,13 @@
             this.label4.Text = "Písmena";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // labels
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox1.Location = new System.Drawing.Point(95, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 1;
+            this.labels.Location = new System.Drawing.Point(95, 3);
+            this.labels.Mask = ">AAAAAAAAA";
+            this.labels.Name = "labels";
+            this.labels.Size = new System.Drawing.Size(103, 20);
+            this.labels.TabIndex = 1;
             // 
             // spustit
             // 
@@ -151,6 +160,14 @@
             this.tabSetting.TabIndex = 1;
             this.tabSetting.Text = "Nastavení";
             this.tabSetting.UseVisualStyleBackColor = true;
+            // 
+            // uiNastaveni
+            // 
+            this.uiNastaveni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiNastaveni.Location = new System.Drawing.Point(3, 3);
+            this.uiNastaveni.Name = "uiNastaveni";
+            this.uiNastaveni.Size = new System.Drawing.Size(473, 200);
+            this.uiNastaveni.TabIndex = 0;
             // 
             // tabLicence
             // 
@@ -226,6 +243,14 @@
             this.tabAbout.Text = "Informace";
             this.tabAbout.UseVisualStyleBackColor = true;
             // 
+            // autor
+            // 
+            this.autor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.autor.Location = new System.Drawing.Point(3, 3);
+            this.autor.Name = "autor";
+            this.autor.Size = new System.Drawing.Size(473, 200);
+            this.autor.TabIndex = 0;
+            // 
             // statusBar
             // 
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -248,31 +273,6 @@
             // 
             this.actionProgress.Name = "actionProgress";
             this.actionProgress.Size = new System.Drawing.Size(100, 16);
-            // 
-            // uiNastaveni
-            // 
-            this.uiNastaveni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiNastaveni.Location = new System.Drawing.Point(3, 3);
-            this.uiNastaveni.Name = "uiNastaveni";
-            this.uiNastaveni.Size = new System.Drawing.Size(473, 200);
-            this.uiNastaveni.TabIndex = 0;
-            // 
-            // autor
-            // 
-            this.autor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autor.Location = new System.Drawing.Point(3, 3);
-            this.autor.Name = "autor";
-            this.autor.Size = new System.Drawing.Size(473, 200);
-            this.autor.TabIndex = 0;
-            // 
-            // countWords
-            // 
-            this.countWords.Location = new System.Drawing.Point(326, 140);
-            this.countWords.Name = "countWords";
-            this.countWords.Size = new System.Drawing.Size(147, 20);
-            this.countWords.TabIndex = 3;
-            this.countWords.Text = "Nalezených slov: 0";
-            this.countWords.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
@@ -314,7 +314,6 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage tabLicence;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox licenceKey;
@@ -325,6 +324,7 @@
         private System.Windows.Forms.ToolStripStatusLabel actionHelper;
         private System.Windows.Forms.ToolStripProgressBar actionProgress;
         private System.Windows.Forms.Label countWords;
+        private System.Windows.Forms.MaskedTextBox labels;
     }
 }
 
