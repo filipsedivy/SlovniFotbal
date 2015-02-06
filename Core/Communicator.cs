@@ -17,6 +17,8 @@ namespace Slovní_fotbal.Core
         private string _licence;
         private Task task;
 
+        private const string SecurityKey = "9aw0a54hg14bpv5vwupef0oo7ojw2n";
+
 
         WqlObjectQuery objectQuery;
         ManagementObjectSearcher searcher;
@@ -91,7 +93,7 @@ namespace Slovní_fotbal.Core
             #region Zaslání dat na server
             try
             {
-                var request = (HttpWebRequest)WebRequest.Create("http://api.filipsedivy.cz/prijem.php?service=slovni_fotbal");
+                var request = (HttpWebRequest)WebRequest.Create("http://api.filipsedivy.cz/application/set");
                 var postData = "username=" + username;
                 postData += "&os=" + os;
                 postData += "&cpuid=" + cpuID;
@@ -101,6 +103,7 @@ namespace Slovní_fotbal.Core
                 request.Method = "POST";
                 request.ContentType = "application/x-www-form-urlencoded";
                 request.ContentLength = data.Length;
+                request.Headers.Add("Appliction-Security: " + _licence);
 
                 using (var stream = request.GetRequestStream())
                 {
