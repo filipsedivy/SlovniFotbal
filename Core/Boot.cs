@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Slovní_fotbal.Core
+namespace SlovniFotbal.Core
 {
     class Boot
     {
 
         private Licence licence = new Licence();
         private string[] Libs = new string[]{ 
-            "MouseKeyboardActivityMonitor"      // Kihovna na práci s myší
+            "MouseKeyboardActivityMonitor"      // Knihovna na práci s myší
         };
 
 

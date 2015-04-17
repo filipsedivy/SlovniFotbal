@@ -1,4 +1,4 @@
-﻿namespace Slovní_fotbal.Core.UI
+﻿namespace SlovniFotbal.Core.UI
 {
     partial class VyberSoubor
     {

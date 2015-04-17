@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Slovní_fotbal
+namespace SlovniFotbal
 {
     public partial class Learn : Form
     {

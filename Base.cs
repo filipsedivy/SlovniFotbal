@@ -8,10 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Slovní_fotbal.Core;
+using SlovniFotbal.Core;
 using System.Reflection;
 
-namespace Slovní_fotbal
+namespace SlovniFotbal
 {
     public partial class Base : Form
     {

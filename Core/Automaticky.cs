@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Slovní_fotbal.Core;
+using SlovniFotbal.Core;
 using System.IO;
 
-namespace Slovní_fotbal.Core
+namespace SlovniFotbal.Core
 {
     class Automaticky
     {

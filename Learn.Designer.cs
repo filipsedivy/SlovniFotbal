@@ -1,4 +1,4 @@
-﻿namespace Slovní_fotbal
+﻿namespace SlovniFotbal
 {
     partial class Learn
     {

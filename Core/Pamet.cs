@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace Slovní_fotbal.Core
+namespace SlovniFotbal.Core
 {
     class Pamet
     {

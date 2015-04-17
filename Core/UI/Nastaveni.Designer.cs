@@ -1,4 +1,4 @@
-﻿namespace Slovní_fotbal.Core.UI
+﻿namespace SlovniFotbal.Core.UI
 {
     partial class Nastaveni
     {
@@ -35,9 +35,9 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.slovnik = new Slovní_fotbal.Core.UI.VyberSoubor();
+            this.slovnik = new SlovniFotbal.Core.UI.VyberSoubor();
             this.label4 = new System.Windows.Forms.Label();
-            this.poziceMysi = new Slovní_fotbal.Core.UI.VyberSoubor();
+            this.poziceMysi = new SlovniFotbal.Core.UI.VyberSoubor();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();

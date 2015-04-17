@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace Slovní_fotbal.Core.UI
+namespace SlovniFotbal.Core.UI
 {
     public partial class VyberSoubor : UserControl
     {

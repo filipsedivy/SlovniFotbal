@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Slovní_fotbal.Core.UI;
+using SlovniFotbal.Core.UI;
 
-namespace Slovní_fotbal.Core.UI
+namespace SlovniFotbal.Core.UI
 {
     public partial class Nastaveni : UserControl
     {

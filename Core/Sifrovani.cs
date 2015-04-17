@@ -7,7 +7,7 @@ using System.IO;
 using System.Security;
 using System.Security.Cryptography;
 
-namespace Slovní_fotbal.Core
+namespace SlovniFotbal.Core
 {
     class Sifrovani
     {

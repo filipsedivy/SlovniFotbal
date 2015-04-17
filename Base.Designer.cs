@@ -1,4 +1,4 @@
-﻿namespace Slovní_fotbal
+﻿namespace SlovniFotbal
 {
     partial class Base
     {
@@ -42,8 +42,8 @@
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.actionHelper = new System.Windows.Forms.ToolStripStatusLabel();
             this.actionProgress = new System.Windows.Forms.ToolStripProgressBar();
-            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
-            this.autor = new Slovní_fotbal.Core.UI.Autor();
+            this.uiNastaveni = new SlovniFotbal.Core.UI.Nastaveni();
+            this.autor = new SlovniFotbal.Core.UI.Autor();
             this.tab.SuspendLayout();
             this.tabProgram.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();

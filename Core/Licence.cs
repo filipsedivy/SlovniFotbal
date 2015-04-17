@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 
-namespace Slovní_fotbal.Core
+namespace SlovniFotbal.Core
 {
     class Licence
     {

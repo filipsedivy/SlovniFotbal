@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Slovní_fotbal.Core.UI.Class
+namespace SlovniFotbal.Core.UI.Class
 {
     class Nastaveni
     {
