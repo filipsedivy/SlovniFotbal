@@ -12,9 +12,7 @@ namespace Slovní_fotbal.Core
     {
 
         private Licence licence = new Licence();
-        private Communicator communicator = new Communicator();
         private string[] Libs = new string[]{ 
-            "SKGL",                             // Knihovna na licenci 
             "MouseKeyboardActivityMonitor"      // Kihovna na práci s myší
         };
 
@@ -22,7 +20,6 @@ namespace Slovní_fotbal.Core
         public Boot()
         {
             DefaultRegistry();
-            communicator.StartThread();
         }
 
         public void DetectLibs()
