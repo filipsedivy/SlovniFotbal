@@ -21,21 +21,16 @@ namespace Slovní_fotbal.Core.UI
 
             label5.Text = Application.ProductVersion;
 
-            if (licence.isFull())
-            {
-                label7.Text = "Plná verze";
-            }
-            else
-            {
-                label7.Text = "Omezená verze";
-            }
-
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("http://filipsedivy.cz");
+        }
+
+        private void showGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/filipsedivy/SlovniFotbal");
         }
     }
 }

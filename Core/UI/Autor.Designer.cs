@@ -36,7 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.showGitHub = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,8 +52,8 @@
             this.tableLayoutPanel1.Controls.Add(this.linkLabel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.showGitHub, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -138,23 +138,24 @@
             // label6
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 100);
+            this.label6.Location = new System.Drawing.Point(3, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "Licence";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // showGitHub
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(84, 100);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(197, 25);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "label7";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showGitHub.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showGitHub.Location = new System.Drawing.Point(84, 50);
+            this.showGitHub.Name = "showGitHub";
+            this.showGitHub.Size = new System.Drawing.Size(197, 25);
+            this.showGitHub.TabIndex = 7;
+            this.showGitHub.TabStop = true;
+            this.showGitHub.Text = "OpenSource GNU - GitHub";
+            this.showGitHub.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.showGitHub_LinkClicked);
             // 
             // Autor
             // 
@@ -179,6 +180,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel showGitHub;
     }
 }

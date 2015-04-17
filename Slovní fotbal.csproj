@@ -54,9 +54,6 @@
       <HintPath>..\..\..\..\..\Desktop\MouseKeyboardActivityMonitor.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="SKGL">
-      <HintPath>..\..\..\..\..\Desktop\spbinaries1051\SKGL.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
     <Reference Include="System.Core" />

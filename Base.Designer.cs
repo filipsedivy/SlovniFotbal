@@ -38,24 +38,16 @@
             this.labels = new System.Windows.Forms.MaskedTextBox();
             this.spustit = new System.Windows.Forms.Button();
             this.tabSetting = new System.Windows.Forms.TabPage();
-            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
-            this.tabLicence = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.licenceKey = new System.Windows.Forms.MaskedTextBox();
-            this.validateLicence = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabAbout = new System.Windows.Forms.TabPage();
-            this.autor = new Slovní_fotbal.Core.UI.Autor();
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.actionHelper = new System.Windows.Forms.ToolStripStatusLabel();
             this.actionProgress = new System.Windows.Forms.ToolStripProgressBar();
+            this.uiNastaveni = new Slovní_fotbal.Core.UI.Nastaveni();
+            this.autor = new Slovní_fotbal.Core.UI.Autor();
             this.tab.SuspendLayout();
             this.tabProgram.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabSetting.SuspendLayout();
-            this.tabLicence.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabAbout.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +56,6 @@
             // 
             this.tab.Controls.Add(this.tabProgram);
             this.tab.Controls.Add(this.tabSetting);
-            this.tab.Controls.Add(this.tabLicence);
             this.tab.Controls.Add(this.tabAbout);
             this.tab.Dock = System.Windows.Forms.DockStyle.Top;
             this.tab.Location = new System.Drawing.Point(0, 0);
@@ -161,77 +152,6 @@
             this.tabSetting.Text = "Nastavení";
             this.tabSetting.UseVisualStyleBackColor = true;
             // 
-            // uiNastaveni
-            // 
-            this.uiNastaveni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiNastaveni.Location = new System.Drawing.Point(3, 3);
-            this.uiNastaveni.Name = "uiNastaveni";
-            this.uiNastaveni.Size = new System.Drawing.Size(473, 200);
-            this.uiNastaveni.TabIndex = 0;
-            // 
-            // tabLicence
-            // 
-            this.tabLicence.BackColor = System.Drawing.Color.White;
-            this.tabLicence.Controls.Add(this.groupBox1);
-            this.tabLicence.Controls.Add(this.label5);
-            this.tabLicence.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabLicence.Location = new System.Drawing.Point(4, 22);
-            this.tabLicence.Name = "tabLicence";
-            this.tabLicence.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLicence.Size = new System.Drawing.Size(479, 206);
-            this.tabLicence.TabIndex = 4;
-            this.tabLicence.Text = "Licence";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.licenceKey);
-            this.groupBox1.Controls.Add(this.validateLicence);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(146, 77);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 115);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Aktivace licence";
-            // 
-            // licenceKey
-            // 
-            this.licenceKey.Location = new System.Drawing.Point(6, 44);
-            this.licenceKey.Mask = ">LLLLL-LLLLL-LLLLL-LLLLL";
-            this.licenceKey.Name = "licenceKey";
-            this.licenceKey.Size = new System.Drawing.Size(196, 20);
-            this.licenceKey.TabIndex = 2;
-            this.licenceKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // validateLicence
-            // 
-            this.validateLicence.Location = new System.Drawing.Point(6, 70);
-            this.validateLicence.Name = "validateLicence";
-            this.validateLicence.Size = new System.Drawing.Size(196, 23);
-            this.validateLicence.TabIndex = 3;
-            this.validateLicence.Text = "Aktivovat plnou verzi";
-            this.validateLicence.UseVisualStyleBackColor = true;
-            this.validateLicence.Click += new System.EventHandler(this.validateLicence_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(58, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Licenční klíč: ";
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Location = new System.Drawing.Point(3, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(473, 71);
-            this.label5.TabIndex = 0;
-            this.label5.Text = resources.GetString("label5.Text");
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // tabAbout
             // 
             this.tabAbout.Controls.Add(this.autor);
@@ -242,14 +162,6 @@
             this.tabAbout.TabIndex = 3;
             this.tabAbout.Text = "Informace";
             this.tabAbout.UseVisualStyleBackColor = true;
-            // 
-            // autor
-            // 
-            this.autor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.autor.Location = new System.Drawing.Point(3, 3);
-            this.autor.Name = "autor";
-            this.autor.Size = new System.Drawing.Size(473, 200);
-            this.autor.TabIndex = 0;
             // 
             // statusBar
             // 
@@ -274,7 +186,23 @@
             this.actionProgress.Name = "actionProgress";
             this.actionProgress.Size = new System.Drawing.Size(100, 16);
             // 
-            // Form1
+            // uiNastaveni
+            // 
+            this.uiNastaveni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiNastaveni.Location = new System.Drawing.Point(3, 3);
+            this.uiNastaveni.Name = "uiNastaveni";
+            this.uiNastaveni.Size = new System.Drawing.Size(473, 200);
+            this.uiNastaveni.TabIndex = 0;
+            // 
+            // autor
+            // 
+            this.autor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.autor.Location = new System.Drawing.Point(3, 3);
+            this.autor.Name = "autor";
+            this.autor.Size = new System.Drawing.Size(473, 200);
+            this.autor.TabIndex = 0;
+            // 
+            // Base
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -284,16 +212,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Base";
             this.Text = "Slovní fotbal";
             this.tab.ResumeLayout(false);
             this.tabProgram.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabSetting.ResumeLayout(false);
-            this.tabLicence.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabAbout.ResumeLayout(false);
             this.statusBar.ResumeLayout(false);
             this.statusBar.PerformLayout();
@@ -314,12 +239,6 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TabPage tabLicence;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox licenceKey;
-        private System.Windows.Forms.Button validateLicence;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.StatusStrip statusBar;
         private System.Windows.Forms.ToolStripStatusLabel actionHelper;
         private System.Windows.Forms.ToolStripProgressBar actionProgress;

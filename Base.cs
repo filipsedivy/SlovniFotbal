@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Slovní_fotbal.Core;
 using System.Reflection;
-using SKGL;
 
 namespace Slovní_fotbal
 {
@@ -20,8 +19,8 @@ namespace Slovní_fotbal
         private Boot boot = new Boot(); // Bootovací jádro ( FirstBootSequence -> FBS )
         private Vyhledavac vyhledavac = new Vyhledavac();
         private Pamet pamet = new Pamet();
-        private Sifrovani sifrovano = new Sifrovani();
         private Licence licence = new Licence();
+        private Sifrovani sifrovano = new Sifrovani();
         private Automaticky automaticky = new Automaticky();
         private Mys mys = new Mys();
 
@@ -30,10 +29,6 @@ namespace Slovní_fotbal
             InitializeComponent();
 
             boot.DetectLibs();
-            if (licence.isValid(licence.getKey("licence")))
-            {
-                tab.TabPages.Remove(tabLicence);
-            }
         }
 
         private void learnMode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -44,12 +39,6 @@ namespace Slovní_fotbal
 
         private void Testing_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (!licence.isFull())
-            {
-                MessageBox.Show("Licence není platná");
-                Environment.Exit(0);
-            }
-
             automaticky.klikat(labels.Text, listBox2);
         }
 
@@ -88,30 +77,13 @@ namespace Slovní_fotbal
             {
                 automaticky.klikat(labels.Text, listBox2);
             }
-            catch (SlovniFotbalException sE)
+            catch (SlovniFotbalException)
             {
 
             }
             finally
             {
                 spustit.Enabled = true;
-            }
-        }
-
-        private void validateLicence_Click(object sender, EventArgs e)
-        {
-            if (licence.isValid(licenceKey.Text))
-            {
-                tab.SelectedTab = tabProgram;
-                tab.TabPages.Remove(tabLicence);
-                licence.setKey("licence", licenceKey.Text);
-                MessageBox.Show("Licence byla aktivována\n\nProgram bude restartován!");
-                System.Diagnostics.Process.Start(Application.ExecutablePath);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Licenční klíč je neplatný");
             }
         }
     }
