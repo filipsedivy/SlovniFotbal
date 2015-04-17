@@ -1,6 +1,6 @@
 ﻿namespace Slovní_fotbal
 {
-    partial class Form1
+    partial class Base
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Base));
             this.tab = new System.Windows.Forms.TabControl();
             this.tabProgram = new System.Windows.Forms.TabPage();
             this.countWords = new System.Windows.Forms.Label();

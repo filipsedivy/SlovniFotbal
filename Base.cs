@@ -14,7 +14,7 @@ using SKGL;
 
 namespace Slovní_fotbal
 {
-    public partial class Form1 : Form
+    public partial class Base : Form
     {
         // == Aplikční jádro! ==
         private Boot boot = new Boot(); // Bootovací jádro ( FirstBootSequence -> FBS )
@@ -25,7 +25,7 @@ namespace Slovní_fotbal
         private Automaticky automaticky = new Automaticky();
         private Mys mys = new Mys();
 
-        public Form1()
+        public Base()
         {
             InitializeComponent();
 
