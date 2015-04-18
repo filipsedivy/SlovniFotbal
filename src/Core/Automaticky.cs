@@ -12,7 +12,12 @@ namespace SlovniFotbal.Core
     class Automaticky
     {
         Licence licence = new Licence();
-        Mys mys = new Mys();
+        Mouse _mouse;
+
+        public Automaticky()
+        {
+            _mouse = new Mouse();
+        }
 
         public void klikat(string pismena, ListBox slova)
         {
@@ -38,11 +43,11 @@ namespace SlovniFotbal.Core
                 {
                     int getLetter = PozicePismena(pismeno.ToString());
                     string[] _pozice = GetPosition(false, getLetter).Split(";".ToCharArray());
-                    mys.Klikni(Mys.Tlacitko.Leve, int.Parse(_pozice[0]), int.Parse(_pozice[1]));
+                    _mouse.Click(Mouse.Type.Left, int.Parse(_pozice[0]), int.Parse(_pozice[1]));
                     System.Threading.Thread.Sleep(licence.getInt("reloadTime", 120, 50, 5000));
                 }
                 string[] _PoziceBu = GetPosition(true, 0).Split(";".ToCharArray());
-                mys.Klikni(Mys.Tlacitko.Leve, int.Parse(_PoziceBu[0]), int.Parse(_PoziceBu[1]));
+                _mouse.Click(Mouse.Type.Left, int.Parse(_PoziceBu[0]), int.Parse(_PoziceBu[1]));
                 System.Threading.Thread.Sleep(licence.getInt("reloadTime", 120, 50, 5000));
             }
 
