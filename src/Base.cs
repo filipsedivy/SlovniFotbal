@@ -22,7 +22,6 @@ namespace SlovniFotbal
         private Licence licence = new Licence();
         private Sifrovani sifrovano = new Sifrovani();
         private Automaticky automaticky = new Automaticky();
-        private Mys mys = new Mys();
 
         public Base()
         {
