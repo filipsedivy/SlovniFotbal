@@ -12,17 +12,28 @@ namespace SlovniFotbal.Core
     class Boot
     {
 
-        private Licence licence = new Licence();
+        private Registry _registry;
+
+        /// <summary>
+        /// Externí knihovny
+        /// </summary>
         private string[] Libs = new string[]{ 
             "MouseKeyboardActivityMonitor"      // Knihovna na práci s myší
         };
 
-
+        /// <summary>
+        /// Inicializace knihoven
+        /// </summary>
         public Boot()
         {
+            _registry = new Registry();
+
             DefaultRegistry();
         }
 
+        /// <summary>
+        /// Detekce existence knihoven
+        /// </summary>
         public void DetectLibs()
         {
             foreach (string lib in Libs)
@@ -39,26 +50,24 @@ namespace SlovniFotbal.Core
             }
         }
 
+        /// <summary>
+        /// Nastavení výchozích hodnot v registrech
+        /// </summary>
         private void DefaultRegistry()
         {
-            if (!licence.keyExists("licence"))
+            if (!_registry.existsKey("reloadTime"))
             {
-                licence.setKey("licence", "");
+                _registry.setKey("reloadTime", "150");
             }
 
-            if (!licence.keyExists("reloadTime"))
+            if (!_registry.existsKey("dictonary"))
             {
-                licence.setKey("reloadTime", "150");
+                _registry.setKey("dictonary", "");
             }
 
-            if (!licence.keyExists("dictonary"))
+            if (!_registry.existsKey("position"))
             {
-                licence.setKey("dictonary", "");
-            }
-
-            if (!licence.keyExists("position"))
-            {
-                licence.setKey("position", "");
+                _registry.setKey("position", "");
             }
 
         }
