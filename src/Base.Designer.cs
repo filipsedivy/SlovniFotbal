@@ -42,8 +42,8 @@
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.actionHelper = new System.Windows.Forms.ToolStripStatusLabel();
             this.actionProgress = new System.Windows.Forms.ToolStripProgressBar();
-            this.uiNastaveni = new SlovniFotbal.Core.UI.Nastaveni();
-            this.autor = new SlovniFotbal.Core.UI.Autor();
+            this.uiNastaveni = new SlovniFotbal.Core.UI.Setting();
+            this.autor = new SlovniFotbal.Core.UI.Author();
             this.tab.SuspendLayout();
             this.tabProgram.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -232,9 +232,9 @@
         private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage tabProgram;
         private System.Windows.Forms.TabPage tabSetting;
-        private Core.UI.Nastaveni uiNastaveni;
+        private Core.UI.Setting uiNastaveni;
         private System.Windows.Forms.TabPage tabAbout;
-        private Core.UI.Autor autor;
+        private Core.UI.Author autor;
         private System.Windows.Forms.Button spustit;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
