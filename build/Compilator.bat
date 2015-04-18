@@ -22,9 +22,11 @@ IF NOT EXIST "%msBuild%" GOTO compilerNotExists
 cd ../src/
 
 :: Instalace balicku chybnych
+echo Probiha stahovani chybejicich knihoven
 call "../build/NuGet.exe" restore %project%.sln
 
 :: Vzdalene volani kompileru
+echo Probiha kompilace projektu
 call %msBuild%\msbuild.exe %project%.sln /p:Configuration=Release /p:OutputPath=%outputPath% /l:FileLogger,Microsoft.Build.Engine;logfile=MSBuild_ReleaseCompile.log
 
 :: Odstraneni ladicich informaci
