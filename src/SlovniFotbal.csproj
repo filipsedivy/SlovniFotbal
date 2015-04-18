@@ -96,7 +96,6 @@
     <Compile Include="Core\UI\SelectFile.Designer.cs">
       <DependentUpon>SelectFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Base.cs">
       <SubType>Form</SubType>
     </Compile>
