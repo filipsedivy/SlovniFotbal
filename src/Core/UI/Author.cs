@@ -11,11 +11,9 @@ using System.Diagnostics;
 
 namespace SlovniFotbal.Core.UI
 {
-    public partial class Autor : UserControl
+    public partial class Author : UserControl
     {
-        Licence licence = new Licence();
-
-        public Autor()
+        public Author()
         {
             InitializeComponent();
 

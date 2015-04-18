@@ -1,6 +1,6 @@
 ﻿namespace SlovniFotbal.Core.UI
 {
-    partial class Autor
+    partial class Author
     {
         /// <summary> 
         /// Required designer variable.

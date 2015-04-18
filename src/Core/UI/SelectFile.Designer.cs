@@ -1,6 +1,6 @@
 ﻿namespace SlovniFotbal.Core.UI
 {
-    partial class VyberSoubor
+    partial class SelectFile
     {
         /// <summary> 
         /// Required designer variable.

@@ -11,7 +11,7 @@ using System.IO;
 
 namespace SlovniFotbal.Core.UI
 {
-    public partial class VyberSoubor : UserControl
+    public partial class SelectFile : UserControl
     {
         public String NazevSouboru
         {
@@ -40,7 +40,7 @@ namespace SlovniFotbal.Core.UI
         private string cesta = "";
         private OpenFileDialog dialog = new OpenFileDialog();
 
-        public VyberSoubor()
+        public SelectFile()
         {
             InitializeComponent();
         }

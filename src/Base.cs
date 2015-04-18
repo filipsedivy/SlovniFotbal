@@ -15,19 +15,22 @@ namespace SlovniFotbal
 {
     public partial class Base : Form
     {
-        // == Aplikční jádro! ==
-        private Boot boot = new Boot(); // Bootovací jádro ( FirstBootSequence -> FBS )
-        private Vyhledavac vyhledavac = new Vyhledavac();
-        private Pamet pamet = new Pamet();
-        private Licence licence = new Licence();
-        private Sifrovani sifrovano = new Sifrovani();
-        private Automaticky automaticky = new Automaticky();
+        private Boot _boot;
+        private Search _search;
+        private Registry _registry;
+        private Automatic _automatic;
 
         public Base()
         {
             InitializeComponent();
 
-            boot.DetectLibs();
+            // Inicializace jednotlivých komponent
+            _boot = new Boot(); // FBS - First Boot Sequence
+            _boot.DetectLibs(); // Detekce knihoven
+
+            _search = new Search(); // Vyhledávač slov
+            _registry = new Registry(); // Práce s registrama
+            _automatic = new Automatic(); // Automatické práce
         }
 
         private void learnMode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -38,14 +41,14 @@ namespace SlovniFotbal
 
         private void Testing_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            automaticky.klikat(labels.Text, listBox2);
+            _automatic.Click(labels.Text, listBox2);
         }
 
         private void tab_Selected(object sender, TabControlEventArgs e)
         {
             if (e.TabPage.Name == "tabSetting")
             {
-                uiNastaveni.RedrawNastaveni();
+                uiNastaveni.RedrawSetting();
             }
         }
 
@@ -61,7 +64,7 @@ namespace SlovniFotbal
             actionHelper.Text = "Probíhá vyhledávání slov";
             try
             {
-                vyhledavac.VyhledatSlova(licence.getKey("dictonary"), labels.Text, listBox2);
+                _search.SearchWords(_registry.getKey("dictonary"), labels.Text, listBox2);
             }
             catch (SlovniFotbalException sE)
             {
@@ -74,7 +77,7 @@ namespace SlovniFotbal
             actionHelper.Text = "Probíhá zadávání slov";
             try
             {
-                automaticky.klikat(labels.Text, listBox2);
+                _automatic.Click(labels.Text, listBox2);
             }
             catch (SlovniFotbalException)
             {

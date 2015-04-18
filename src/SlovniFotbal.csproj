@@ -70,34 +70,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Automaticky.cs" />
+    <Compile Include="Core\Automatic.cs" />
     <Compile Include="Core\Boot.cs" />
-    <Compile Include="Core\Licence.cs" />
+    <Compile Include="Core\Exceptions\DictonaryNotFoundException.cs" />
+    <Compile Include="Core\Exceptions\TextShortException.cs" />
     <Compile Include="Core\Mouse.cs" />
-    <Compile Include="Core\Pamet.cs" />
-    <Compile Include="Core\Sifrovani.cs" />
-    <Compile Include="Core\UI\Autor.cs">
+    <Compile Include="Core\Registry.cs" />
+    <Compile Include="Core\Search.cs" />
+    <Compile Include="Core\UI\Author.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Core\UI\Autor.Designer.cs">
-      <DependentUpon>Autor.cs</DependentUpon>
+    <Compile Include="Core\UI\Author.Designer.cs">
+      <DependentUpon>Author.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core\UI\Class\Nastaveni.cs" />
-    <Compile Include="Core\UI\Nastaveni.cs">
+    <Compile Include="Core\UI\Class\Setting.cs" />
+    <Compile Include="Core\UI\Setting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Core\UI\Nastaveni.Designer.cs">
-      <DependentUpon>Nastaveni.cs</DependentUpon>
+    <Compile Include="Core\UI\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core\UI\VyberSoubor.cs">
+    <Compile Include="Core\UI\SelectFile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Core\UI\VyberSoubor.Designer.cs">
-      <DependentUpon>VyberSoubor.cs</DependentUpon>
+    <Compile Include="Core\UI\SelectFile.Designer.cs">
+      <DependentUpon>SelectFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core\Vyhledavac.cs" />
-    <Compile Include="Core\Vyjimky.cs" />
-    <Compile Include="Core\Vyuka.cs" />
+    <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Base.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,14 +111,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Core\UI\Autor.resx">
-      <DependentUpon>Autor.cs</DependentUpon>
+    <EmbeddedResource Include="Core\UI\Author.resx">
+      <DependentUpon>Author.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Core\UI\Nastaveni.resx">
-      <DependentUpon>Nastaveni.cs</DependentUpon>
+    <EmbeddedResource Include="Core\UI\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Core\UI\VyberSoubor.resx">
-      <DependentUpon>VyberSoubor.cs</DependentUpon>
+    <EmbeddedResource Include="Core\UI\SelectFile.resx">
+      <DependentUpon>SelectFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
@@ -174,6 +173,7 @@
   <ItemGroup>
     <Content Include="favico.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
