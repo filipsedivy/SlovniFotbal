@@ -1,8 +1,6 @@
 ﻿--- Verze 1.0.1.0 ---
 √ Oveření knihoven při startu, zda-li existují
-× Omezení funkčnosti programu, v případě že není aktivní
 × Převedení automatického klikání do třídy „Automatika“
-
 
 // Další verze
 • Odchycení hlaviček s písmeny
