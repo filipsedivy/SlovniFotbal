@@ -17,16 +17,12 @@ set debug=false
 :: == Kompilator ==
 :: Evereni existence slozky
 IF NOT EXIST "%msBuild%" GOTO compilerNotExists
-ELSE GOTO compilerExists
-
-:: Navestidlo, existence .NET
-:compilerExists
 
 :: Jdeme za projektem
 cd ../src/
 
 :: Instalace balicku chybnych
-call NuGet.exe restore %project%.sln
+call "../build/NuGet.exe" restore %project%.sln
 
 :: Vzdalene volani kompileru
 call %msBuild%\msbuild.exe %project%.sln /p:Configuration=Release /p:OutputPath=%outputPath% /l:FileLogger,Microsoft.Build.Engine;logfile=MSBuild_ReleaseCompile.log
