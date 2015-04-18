@@ -66,7 +66,7 @@ namespace SlovniFotbal
             {
                 _search.SearchWords(_registry.getKey("dictonary"), labels.Text, listBox2);
             }
-            catch (SlovniFotbalException sE)
+            catch (Exception sE)
             {
                 actionHelper.Text = sE.Message;
                 actionHelper.BackColor = System.Drawing.Color.LightCoral;
@@ -79,7 +79,7 @@ namespace SlovniFotbal
             {
                 _automatic.Click(labels.Text, listBox2);
             }
-            catch (SlovniFotbalException)
+            catch (Exception)
             {
 
             }
