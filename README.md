@@ -35,9 +35,14 @@ Nebo
 6. Následně můžete spustit aktuální verzi aplikace *SlovniFotbal.exe*
 
 ## Mapa vývoje ##
-- [ ] Převedení tříd do angličtiny 
 - [ ] Odchycení hlaviček z hry 
 - [ ] Online slovník
 - [ ] Offline slovník
+- [x] Převedení tříd do angličtiny <small>(1.0.1)</small>
 - [x] Ověření existence knihoven při startu
 - [x] Práce s registry
+
+## Vývojové diagramy ##
+
+### Rozhodovací diagram pro automatické klikání ###
+![Rozhodovací diagram pro automatické klikání](http://i.imgur.com/ztPhQR2.png)
