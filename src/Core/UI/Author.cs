@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Diagnostics;
+using System.Text;
+using System.Windows.Forms;
 
 namespace SlovniFotbal.Core.UI
 {
@@ -17,18 +11,24 @@ namespace SlovniFotbal.Core.UI
         {
             InitializeComponent();
 
-            label5.Text = Application.ProductVersion;
-
+            licence.Text = Application.ProductVersion;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void OpenBrowser(object sender, EventArgs e)
         {
-            Process.Start("http://filipsedivy.cz");
-        }
+            string url = "";
+            switch ((sender as LinkLabel).Name)
+            {
+                case "showGitHub":
+                    url = "https://github.com/filipsedivy/SlovniFotbal";
+                    break;
 
-        private void showGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://github.com/filipsedivy/SlovniFotbal");
+                case "ownWebsite":
+                    url = "http://filipsedivy.cz";
+                    break;
+            }
+
+            Process.Start(url);
         }
     }
 }
